@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroSet_UI.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ using System.Windows.Forms;
 
 namespace EasyZip0._1
 {
-    public partial class Form1 : Form
+    public partial class Form1 : MetroSetForm
     {
         public Form1()
         {
@@ -112,6 +113,11 @@ namespace EasyZip0._1
             })
             { IsBackground = true };
             thread.Start();
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
