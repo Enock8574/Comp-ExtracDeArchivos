@@ -1,2 +1,2 @@
 # Comp-ExtracDeArchivos
-Comprimidor y extractor de archivos ZIP
+Comprimidor y Extractor de Archivos ZIP
