@@ -1,4 +1,5 @@
-﻿using MetroSet_UI.Forms;
+﻿//EasyZip0.2 Desarrollado Por Enoc Carrera
+using MetroSet_UI.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +11,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO.Compression;
 
 namespace EasyZip0._1
 {
@@ -119,5 +121,30 @@ namespace EasyZip0._1
         {
             this.Close();
         }
+
+        private void btnUnZIPfolder_Click(object sender, EventArgs e)
+        {
+            //string Ruta = Path.GetFullPath(textFolder.Text);
+            string RutaZip = @"C:\Users\sentr\Desktop\Ejemplo.zip";
+            string RutaExtracion = textFolder.Text;
+            //Advertencia por si se deja en blanco la ruta del Folder
+            // if (string.IsNullOrEmpty(textFolder.Text))
+            //  {
+            //      MessageBox.Show("Por Favor Seleccione un Folder para Descomprimir.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //     textFolder.Focus();
+            //     return;
+            ZipFile.ExtractToDirectory(RutaZip, RutaExtracion);
+        }
+           // if (!Ruta.EndsWith(Path.DirectorySeparatorChar.ToString(), StringComparison.Ordinal))
+              //  Ruta += Path.DirectorySeparatorChar;
+              
+        }
+
+
+
+
+
+
     }
-}
+    
+

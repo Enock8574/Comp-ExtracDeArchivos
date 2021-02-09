@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textFolder = new System.Windows.Forms.TextBox();
@@ -38,8 +37,10 @@
             this.buttonArchivo = new System.Windows.Forms.Button();
             this.buttonZIPArchivo = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonClose = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnUnZIPfolder = new System.Windows.Forms.Button();
+            this.btnUnZIPArchivo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,20 +119,10 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(19, 230);
+            this.progressBar1.Location = new System.Drawing.Point(19, 255);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(368, 23);
             this.progressBar1.TabIndex = 8;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(436, 204);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(182, 131);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
             // 
             // buttonClose
             // 
@@ -143,14 +134,45 @@
             this.buttonClose.UseVisualStyleBackColor = true;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::EasyZip0._1.Properties.Resources.original;
+            this.pictureBox1.Location = new System.Drawing.Point(444, 220);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 106);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnUnZIPfolder
+            // 
+            this.btnUnZIPfolder.Location = new System.Drawing.Point(525, 121);
+            this.btnUnZIPfolder.Name = "btnUnZIPfolder";
+            this.btnUnZIPfolder.Size = new System.Drawing.Size(75, 36);
+            this.btnUnZIPfolder.TabIndex = 12;
+            this.btnUnZIPfolder.Text = "UnZIP";
+            this.btnUnZIPfolder.UseVisualStyleBackColor = true;
+            this.btnUnZIPfolder.Click += new System.EventHandler(this.btnUnZIPfolder_Click);
+            // 
+            // btnUnZIPArchivo
+            // 
+            this.btnUnZIPArchivo.Location = new System.Drawing.Point(525, 163);
+            this.btnUnZIPArchivo.Name = "btnUnZIPArchivo";
+            this.btnUnZIPArchivo.Size = new System.Drawing.Size(75, 36);
+            this.btnUnZIPArchivo.TabIndex = 13;
+            this.btnUnZIPArchivo.Text = "UnZIP";
+            this.btnUnZIPArchivo.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(633, 341);
-            this.Controls.Add(this.buttonClose);
+            this.Controls.Add(this.btnUnZIPArchivo);
+            this.Controls.Add(this.btnUnZIPfolder);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.buttonZIPArchivo);
             this.Controls.Add(this.buttonArchivo);
@@ -180,8 +202,10 @@
         private System.Windows.Forms.Button buttonArchivo;
         private System.Windows.Forms.Button buttonZIPArchivo;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnUnZIPfolder;
+        private System.Windows.Forms.Button btnUnZIPArchivo;
     }
 }
 
